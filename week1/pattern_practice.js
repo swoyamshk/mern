@@ -106,17 +106,17 @@
 
 
 //Hollow Square
-// for (let i = 0; i < 5; i++) {
-//   let line = '';
-//   for (let j = 0; j < 5; j++) {
-//       if (i === 0 || i === 4 || j === 0 || j === 4) {
-//           line += '*';
-//       } else {
-//           line += ' ';
-//       }
-//   }
-//   console.log(line);
-// }
+for (let i = 0; i < 5; i++) {
+  let line = '';
+  for (let j = 0; j < 5; j++) {
+      if (i === 0 || i === 4 || j === 0 || j === 4) {
+          line += '*';
+      } else {
+          line += ' ';
+      }
+  }
+  console.log(line);
+}
 
 //Hollow Pattern
 //Parallel bar
@@ -175,14 +175,14 @@
 //   console.log(stars);
 // }
 
-for(let i= 1; i<=5; i++){
-  let stars = "";
-  for(let j=1;j<=5;j++){
-    if(i==1 ||j==1 ||i ==5 ||j==5 || i == j|| i+j ==6){
-      stars += "* ";
-    }else{
-      stars += "  ";
-    }
-  }
-  console.log(stars);
-}
+// for(let i= 1; i<=5; i++){
+//   let stars = "";
+//   for(let j=1;j<=5;j++){
+//     if(i==1 ||j==1 ||i ==5 ||j==5 || i == j|| i+j ==6){
+//       stars += "* ";
+//     }else{
+//       stars += "  ";
+//     }
+//   }
+//   console.log(stars);
+// }
