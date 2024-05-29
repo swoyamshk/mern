@@ -1,95 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - ChatterBox</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f9fa;
-            margin: 0;
-        }
-        .form-container {
-            max-width: 600px;
-            width: 100%;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .form-container img {
-            width: 50px;
-            margin-bottom: 20px;
-        }
-        .bg-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            background: url('your-image-url.jpg') no-repeat center center;
-            background-size: cover;
-        }
-        .form-wrapper {
-            margin-left: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 50%;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
 <body>
-    <div class="bg-image"></div>
-    <div class="form-wrapper">
-        <div class="form-container">
-            <div class="text-center mb-4">
-                <img src="chatterbox-logo.png" alt="ChatterBox">
+
+    <div class="container">
+        <header>
+            <h1>Self Introduction</h1>
+        </header>
+        <section class="intro">            
+            <div class="intro-text">
+                <h1>About Myself</h1>
+                <p>My Name is Deeshri Thapa. I am currently a student studying in PCPS College. I am pursuing a bachelor's degree in computer and software engineering. I completed my second year recently and have been taking a MERN fullstack training.</p>
             </div>
-            <h2 class="text-center mb-4">Sign Up</h2>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="firstName">First name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="lastName">Last name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="example.email@gmail.com">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="At least 8+ characters">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="terms">
-                    <label class="form-check-label" for="terms">By signing up, I agree with the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a></label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-                <div class="text-center mt-3">
-                    <p>Already have an account? <a href="#">Log in</a></p>
-                    <p>OR</p>
-                    <button type="button" class="btn btn-danger">Sign up with Google</button>
-                </div>
-            </form>
-        </div>
+            <img src="images/user.jpg" alt="Profile Picture">
+            
+        </section>
+        <section class="hobbies">
+            <h2>My hobbies</h2>
+            <p>My hobbies include a wide range of things like dancing, reading books, swimming, listening to music, and traveling.</p>
+            <div class="hobbies-images">
+                <img src="images/music.jpg" alt="Hobby 1">
+                <img src="images/books.jpg" alt="Hobby 2">
+                <img src="images/travel.jpg" alt="Hobby 3">
+            </div>
+        </section>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

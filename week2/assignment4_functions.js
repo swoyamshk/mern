@@ -78,14 +78,12 @@
 //   ];
 
 //   let result = "";
-
 //   for (let i = 0; i < romanNumerals.length; i++) {
 //     while (num >= romanNumerals[i].value) {
 //       result += romanNumerals[i].numeral;
 //       num -= romanNumerals[i].value;
 //     }
 //   }
-
 //   return result;
 // }
 
