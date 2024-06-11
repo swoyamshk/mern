@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <title>Navbar</title>
+  </head>
+  <body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: brown;
+            color: antiquewhite;
+        }
+        .branding{
+            display: flex;
+            justify-content: start;
+        }
+        .navlist{
+            display: flex;
+            justify-content: end; 
+            flex: 3;
+        }
+        .navlist li{
+            margin: 0px 20px 0px 20px;
+        }
+    </style>
+    <nav class="navbar">
+      <div class="branding">
+       <h2>Logo</h2>
+      </div>
+      <ul class="navlist">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+  </body>
+</html>

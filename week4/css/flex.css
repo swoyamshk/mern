@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container{
+    background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: end; */
+    /* justify-content: start; */
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+    
+}
+
+.flex-container div{
+    border-radius: 30px;
+    background-color: aqua;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 90px;
+    align-items: center;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .grid-container{
+            background-color: rgb(232, 213, 213);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 2fr auto;
+            gap: 10px;
+            padding: 10px;
+            border: 2px solid #ccc ;
+            border-radius: 10px;
+        }
+
+        .header,.content,.siderbar,.footer{
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            color:#fff;
+
+        }
+        .header{
+            background-color: #4caf50;
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+        .siderbar{
+            background-color: #ff9800;
+        }
+        .content{
+            background-color: blueviolet;
+        } 
+        .footer{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <!-- <div class="main-div">
+        <div class="first-div"></div>
+        <div class="second-div">
+            <div class="">
+            </div>
+            <div></div>
+        </div>
+        <div class="third-div"></div>
+    </div> -->   
+</body>
+</html>
