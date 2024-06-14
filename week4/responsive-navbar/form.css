@@ -16,10 +16,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.img-1{
+.img-1 {
     width: 60px;
     height: 60px;
 }
+
 .nav {
     background-color: white;
     display: flex;
@@ -27,11 +28,6 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
-    
-}
-
-.title-1 {
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .button-1 {
@@ -41,22 +37,13 @@ body {
     height: 40px;
 }
 
-.signup, .login {
+.signup {
     padding: 4px 8px;
     border: none;
     width: 100px;
-}
-
-.signup {
     color: azure;
     background-color: #d7c37a;
     border: 2px solid black;
-}
-
-.login {
-    background-color: rgb(234, 237, 239);
-    color: black;
-    border: 1px solid black;
 }
 
 .menu-toggle {
@@ -136,7 +123,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .button {
+    .button-1 {
         display: none;
         flex-direction: column;
         gap: 0;
@@ -147,11 +134,8 @@ button:hover {
         display: block;
     }
 
-    .nav {
-        justify-content: space-between;
-    }
-
-    .nav.show .button {
+    .nav.show .button-1 {
         display: flex;
     }
 }
+
