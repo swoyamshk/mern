@@ -1,0 +1,12 @@
+*{
+    margin: 20px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+.favorite {
+    font-weight: bold;
+    font-size: 24px;
+    color: Red;
+}
