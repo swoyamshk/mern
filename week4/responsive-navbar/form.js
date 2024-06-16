@@ -7,4 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.toggle('show');
         navItems.classList.toggle('show');
     });
+
+    
 });
