@@ -1,3 +1,4 @@
+// Wait until the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
     const bookList = document.getElementById('book-list');
     const addBookBtn = document.getElementById('add-book-btn');
