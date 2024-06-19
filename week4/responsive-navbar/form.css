@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     padding: 0;
     margin: 0;
@@ -124,18 +123,22 @@ button:hover {
 
 @media (max-width: 768px) {
     .button-1 {
-        display: none;
+        position: absolute;
+        justify-content: end;
+        top: 60px;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        gap: 0;
-        padding: 10px 0;
+        display: none;
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
     }
 
     .nav.show .button-1 {
         display: flex;
     }
+
 }
 

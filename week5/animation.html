@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #div-1{
+        height: 150px;
+        width: 150px;
+        background-color: rgb(109, 147, 180);
+        /* transition: height 1s, width 2s, background-color 3s; */
+        animation: cardAnimate 2s infinite;
+        
+       }
+       #div-1:hover{
+        height: 200px;
+        width: 200px;
+        background-color: rgb(17, 23, 28);
+       }
+
+       @keyframes cardAnimate {
+        from{
+            background-color: aqua;
+        }to{
+            background-color: bisque;
+        }
+        
+       }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="div-1">
+            <p>Animation</p>
+        </div>
+    </div>
+    
+</body>
+</html>
