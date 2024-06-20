@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body>
+    <button id="menu-toggle">Toggle Menu</button>
+    <div class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="btn-1">
+      <button class="btn1">Hover Button</button>
+    </div>
+    <br />
+    <div class="circle-container">
+      <div class="circle"></div>
+    </div>
+    <br />
+    <div class="ball"></div>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1718653157790-15b3edd45507?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1718728593403-05c597938b62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1718358471230-5527cf7959a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+        <img src="https://images.unsplash.com/photo-1718095744838-dace5469b218?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4">
+    </div>
+    <br />
+    <div class="marquee">
+      <div class="marquee-content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+          sunt laudantium iste molestias, mollitia qui. Quisquam id voluptatibus
+          earum impedit voluptatum facere ipsum at aliquam sunt quam, amet
+          quibusdam esse.
+        </p>
+      </div>
+    </div>
+    
+    <br>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <h2>Front Side</h2>
+                <p>This is the front side of the card.</p>
+            </div>
+            <div class="card-back">
+                <h2>Back Side</h2>
+                <p>This is the back side of the card.</p>
+            </div>
+        </div>
+    </div>
+
+<br>
+<div class="accordion">
+    <div class="accordion-item">
+        <button class="accordion-header">Section 1</button>
+        <div class="accordion-content">
+            <p>Content for Section 1.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-header">Section 2</button>
+        <div class="accordion-content">
+            <p>Content for Section 2.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <button class="accordion-header">Section 3</button>
+        <div class="accordion-content">
+            <p>Content for Section 3.</p>
+        </div>
+    </div>
+</div>
+
+<br>
+    <div class="spinner"></div>
+
+    <br>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <button onclick="setProgress(75)">Set Progress to 75%</button>
+    <button onclick="setProgress(50)">Set Progress to 50%</button>
+    <button onclick="setProgress(100)">Set Progress to 100%</button>
+
+    <script src="animation.js"></script>
+  </body>
+
+</html>
