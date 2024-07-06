@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 
-//props pass data and event handlers from a parent component to a child component
 class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       timerValue: 0,
     };
-    this.intervalId = null;  // Store the interval ID to clear it later
+    this.intervalId = null;  
   }
 
   startTimer = () => {
-    // Only start a new interval if one doesn't already exist
     if (this.intervalId === null) {
       this.intervalId = setInterval(() => {
         this.setState((prevState) => ({
@@ -25,6 +23,7 @@ class Timer extends Component {
     if (this.intervalId !== null) {
       clearInterval(this.intervalId);
       this.intervalId = null; 
+      this.setState({ timerValue: 0 });
     }
   };
 
