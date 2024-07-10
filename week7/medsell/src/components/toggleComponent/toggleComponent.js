@@ -8,7 +8,7 @@ const ToggleComponent = () => {
     setIsOn(prevState => !prevState);
   };
   return (
-    <div>
+    <div className='mb-5 ml-5'>
       <ChildToggleComponent isOn={isOn} toggleSwitch={toggleSwitch} />
       <button onClick={toggleSwitch}>Toggle Switch in parent Component</button>
     </div>

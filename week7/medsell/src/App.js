@@ -13,8 +13,7 @@ import ToggleComponent from './components/toggleComponent/toggleComponent';
 function App() {
   return (
     <>
-   <h1>Hello World</h1>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio iusto necessitatibus suscipit odit voluptate id laborum consectetur, velit perferendis omnis rerum fugiat accusamus consequuntur maxime reiciendis provident porro eligendi?</p>
+   <h1 className='mb-5 ml-5'>Hello World</h1>
    {/* <ClassComponent/> */}
    {/* <Counter /> */}
    {/* <Timer />
@@ -22,7 +21,7 @@ function App() {
    <PropsPrac name="Swoyam" surname="Shakya"/>
    <GreetS/>
    <GreetD/> */}
-   <ToggleComponent />
+   <ToggleComponent/>
    <CounterParentComponent />
    <ParentMessageComponent />
    </>
