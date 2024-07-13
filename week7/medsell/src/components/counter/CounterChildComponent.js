@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CounterChildComponent = ({ counter, increment, decrement }) => {
+const CounterChildComponent = ({counter, increment, decrement}) => {
   return (
     <div>
       <p>Current Count: {counter}</p>

@@ -13,12 +13,12 @@ const CounterParentComponent = () => {
     };
   
     return (
-      <div  className='mb-5 ml-5'>
+      <div className='mb-5 ml-5'>
         <CounterChildComponent counter={counter} increment={increment} decrement={decrement} />
-        <button onClick={increment}>Increment in Parent</button>
+        <button className='underline' onClick={increment}>Increment in Parent</button>
         <button onClick={decrement}>Decrement in Parent</button>
       </div>
     );
   };
 
-export default CounterParentComponent
+export default CounterParentComponent;
