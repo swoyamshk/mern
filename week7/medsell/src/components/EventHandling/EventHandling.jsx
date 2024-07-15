@@ -1,13 +1,11 @@
 import React from 'react'
 
-const EventHandling = () => {
-    const handleClick =()=>{
-
-    }
+const EventHandling = ({onButtonClick}) => {
+    
   return (
     <div>
         <h1>EventHandling</h1>
-        <button onClick={()=>handleClick()} className='bg-blue-500'>Click Me</button>
+        <button onClick={onButtonClick}  className='bg-blue-500'>Click Me</button>
     </div>
   )
 }

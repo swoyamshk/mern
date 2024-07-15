@@ -15,14 +15,15 @@ import HomeComponent from './components/Home/HomeComponent';
 import AboutComponent from './components/About/AboutComponent';
 import ShopComponent from './components/Shop/ShopComponent';
 import CardComponent from './components/CardComponent/CardComponent';
-import TodoApp from './components/ToDoComponent/TodoApp';
+import TodoApp from './components/ToDoList/TodoApp';
 
 function App() {
   return (
     <>
     <Router>
       <NavbarComponent/>
-      <TodoApp />
+      <TodoApp/>
+      {/* <TodoApp /> */}
     <Routes>
       <Route path ='/' element={<HomeComponent/>}/>
       <Route path ='/shop' element={<ShopComponent/>}/>

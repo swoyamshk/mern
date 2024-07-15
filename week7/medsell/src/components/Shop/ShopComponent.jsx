@@ -1,8 +1,9 @@
 import React from 'react'
+import ParentComponent from '../PropDrilling/ParentComponent'
 
 const ShopComponent = () => {
   return (
-    <div>ShopComponent</div>
+    <ParentComponent />
   )
 }
 
