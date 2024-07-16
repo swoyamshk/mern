@@ -2,6 +2,7 @@ import React from 'react'
 import CardComponent from '../CardComponent/CardComponent'
 import EventHandling from '../EventHandling/EventHandling'
 import EventFunctionProps from '../EventHandling/EventFunctionProps'
+import TodoApp from '../ToDoList/TodoApp'
 
 const HomeComponent = () => {
   const productData = [
@@ -13,6 +14,8 @@ const HomeComponent = () => {
     }]
   return (
     <>
+          <TodoApp/>
+
     {/* <EventFunctionProps/>
           <CardComponent data={productData}/> */}
 

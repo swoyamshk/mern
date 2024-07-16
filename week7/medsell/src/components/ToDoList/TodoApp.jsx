@@ -25,7 +25,7 @@ const TodoApp = () => {
 
     return (
         <div className="max-w-md mx-auto mt-10 p-4 bg-white rounded shadow-lg">
-            <h1 className="text-2xl font-bold mb-4">To-Do List</h1>
+            <h1 className="text-2xl font-bold mb-4">Todo</h1>
             <div className="flex">
                 <input 
                     type="text" 
