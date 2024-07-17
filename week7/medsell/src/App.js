@@ -20,6 +20,7 @@ import ProductComponent from './components/ProductComponent/ProductComponent';
 import LoginPage from './components/Login/Login';
 import RegisterPage from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
+import EventRegistration from './components/EventRegistration/EventRegistration';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Route path ='/about' element={<AboutComponent/>}/>
       <Route path ='/product' element={<ProductComponent/>}/>
       <Route path ='/contact' element={<ContactUs/>}/>
+      <Route path ='/event' element={<EventRegistration/>}/>
       <Route path ='/login' element={<LoginPage/>}/>
       <Route path ='/signup' element={<RegisterPage/>}/>
 
