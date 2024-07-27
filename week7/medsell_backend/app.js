@@ -115,13 +115,24 @@
 // app.listen(3000,()=>{
 //     console.log("3000");
 // });
+require('dotenv').config();
 
 const express = require('express');
 const app =express();
 
 const connectDB = require('./src/config/db')
+const userRoute = require('./src/routes/userRoute')
+const productRoute = require('./src/routes/productRoute')
+const authRoute = require('./src/routes/authRoute')
+
+
 app.use(express.json());
-const port = 5000;
+const port = process.env.port;
+
+// app.use('/user', userRoute)
+app.use('/user', productRoute)
+app.use('/api/auth', authRoute)
+
 //used to connect to the database
 connectDB();
 
