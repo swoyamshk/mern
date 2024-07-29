@@ -123,6 +123,7 @@ const app =express();
 const connectDB = require('./src/config/db')
 const userRoute = require('./src/routes/userRoute')
 const productRoute = require('./src/routes/productRoute')
+const profileRoutes = require("./src/routes/profileRoutes");
 const authRoute = require('./src/routes/authRoute')
 
 
@@ -133,6 +134,7 @@ const port = process.env.port;
 app.use('/user', productRoute)
 app.use('/api/auth', authRoute)
 
+app.use('/api/profile', profileRoutes);
 //used to connect to the database
 connectDB();
 

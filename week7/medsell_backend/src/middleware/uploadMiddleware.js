@@ -50,7 +50,7 @@ const profileImageStorage = diskStorage({
 });
 
 // Multer instances
-const profileImage = multer({
+const profileImage = multer({ 
   storage: profileImageStorage,
   fileFilter: filter,
 });
