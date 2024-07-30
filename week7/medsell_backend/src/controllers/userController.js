@@ -1,6 +1,6 @@
 //controllers to save
 
-const User = require("../models/userModel");
+const User = require("../models/authUserModel");
 
 const createUser = async(req, res)=>{
 

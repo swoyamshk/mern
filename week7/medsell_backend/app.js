@@ -124,7 +124,9 @@ const connectDB = require('./src/config/db')
 const userRoute = require('./src/routes/userRoute')
 const productRoute = require('./src/routes/productRoute')
 const profileRoutes = require("./src/routes/profileRoutes");
-const authRoute = require('./src/routes/authRoute')
+const authRoute = require('./src/routes/authRoute');
+const categoryRoute = require('./src/routes/categoryRoute')
+
 
 
 app.use(express.json());
@@ -133,6 +135,7 @@ const port = process.env.port;
 // app.use('/user', userRoute)
 app.use('/user', productRoute)
 app.use('/api/auth', authRoute)
+app.use('/category',categoryRoute)
 
 app.use('/api/profile', profileRoutes);
 //used to connect to the database

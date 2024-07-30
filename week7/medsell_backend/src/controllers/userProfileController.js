@@ -14,7 +14,7 @@ const userProfile = (req, res) => {
   );
   newUserProfile
     .save()
-    .then((data) => {
+    .then((data) => { 
       res
         .status(201)
         .json({ message: "User profile added successfully", data });

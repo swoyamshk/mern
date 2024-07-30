@@ -1,56 +1,65 @@
-const User = require('../models/authModel');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
-const UserProfile = require('../models/userProfileModel');
+const User = require("../models/authUserModel");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+const UserProfile = require("../models/userProfileModel");
 
 dotenv.config();
 
 const registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password,role } = req.body;
+  // const userEmail = req.body.email;
 
   try {
     let user = await User.findOne({ email });
 
     if (user) {
-      return res.status(400).json({ msg: 'User already exists' });
+      return res.status(400).json({ msg: "User already exists" });
     }
 
     user = new User({
-      name,
-      email,
-      password,
+      // name,
+      // email,
+      // password,
+      name: name,
+      email: email,
+      password: password,
+      role:role
     });
 
     await user.save();
 
-    const newProfile = new UserProfile({user:user._id});
+    // Create profile for the new user
+    const newProfile = new UserProfile({ user: user._id });
     await newProfile.save();
 
-    const payload = {
-      user: {
-        id: user.id,
-      },
-    };
+    // do this if you want to redirect to dashboard after registration
+    // const payload = {
+    //   user: {
+    //     id: user.id,
+    //   },
+    // };
 
-    jwt.sign(
-      payload,
-      process.env.JWT_SECRET,
-      { expiresIn: '1h' },
-      (err, token) => {
-        if (err) throw err;
-        res.json({msg: "User Registered Sucessfully", token, userDetails: user });
-      }
-    );
+    // console.log(payload);
+
+    // jwt.sign(
+    //   payload,
+    //   process.env.JWT_SECRET,
+    //   { expiresIn: "1h" },
+    //   (err, token) => {
+    //     if (err) throw err;
+    //     res.json({ token});
+    //   }
+    // );
 
     res.status(201).json({
-      msg:"User registered sucessfully",
-      user:user,
-      userProfile :newProfile,
-    })
+      msg: "User registered successfully",
+      user: user,
+      userProfile: newProfile,
+    });
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server error');
+    res.status(500).send({ msg: err.message });
   }
 };
 
@@ -61,13 +70,13 @@ const loginUser = async (req, res) => {
     let user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
+      return res.status(400).json({ msg: "Invalid credentials" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
+      return res.status(400).json({ msg: "Invalid credentials" });
     }
 
     const payload = {
@@ -79,15 +88,19 @@ const loginUser = async (req, res) => {
     jwt.sign(
       payload,
       process.env.JWT_SECRET,
-      { expiresIn: '1h' },
+      { expiresIn: "1h" },
       (err, token) => {
         if (err) throw err;
-        res.json({ message:"User logged in sucessfully",token });
+        res.json({
+          msg: "user logged in successfully",
+          token: `Bearer ${token}`,
+          user: user,
+        });
       }
     );
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server error');
+    res.status(500).send("Server error");
   }
 };
 
