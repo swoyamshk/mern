@@ -119,11 +119,12 @@ require('dotenv').config();
 
 const express = require('express');
 const app =express();
+const cors = require('cors');
 
 const connectDB = require('./src/config/db')
-const userRoute = require('./src/routes/userRoute')
+// const userRoute = require('./src/routes/userRoute')
 const productRoute = require('./src/routes/productRoute')
-const profileRoutes = require("./src/routes/profileRoutes");
+const profileRoutes = require("./src/routes/userProfileRoute");
 const authRoute = require('./src/routes/authRoute');
 const categoryRoute = require('./src/routes/categoryRoute')
 
@@ -131,11 +132,13 @@ const categoryRoute = require('./src/routes/categoryRoute')
 
 app.use(express.json());
 const port = process.env.port;
-
+app.use(cors());
 // app.use('/user', userRoute)
 app.use('/user', productRoute)
 app.use('/api/auth', authRoute)
 app.use('/category',categoryRoute)
+app.use('/product',productRoute)
+
 
 app.use('/api/profile', profileRoutes);
 //used to connect to the database

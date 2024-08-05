@@ -21,6 +21,7 @@ import LoginPage from './components/Login/Login';
 import RegisterPage from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
 import EventRegistration from './components/EventRegistration/EventRegistration';
+import RegistrationForm from './components/Register/Register';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
       <Route path ='/contact' element={<ContactUs/>}/>
       <Route path ='/event' element={<EventRegistration/>}/>
       <Route path ='/login' element={<LoginPage/>}/>
-      <Route path ='/signup' element={<RegisterPage/>}/>
+      <Route path ='/signup' element={<RegistrationForm/>}/>
 
       
 

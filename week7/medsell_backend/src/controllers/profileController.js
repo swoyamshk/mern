@@ -35,9 +35,9 @@ const updateUserProfile = async (req, res) => {
 // Get user profile
 const getUserProfile = async (req, res) => {
   try {
-    const profile = await UserProfiles.findOne({ user: req.user._id }).populate(
+    const profile = await UserProfiles.findOne({ user: req.user.id }).populate(
       "user",
-      ["name", "email"]
+      ["name", "email"] 
     );
     if (!profile) {
       return res.status(404).json({ msg: "Profile not found" });
@@ -79,7 +79,7 @@ const getUserProfileById = async (req, res) => {
 // Delete user profile
 const deleteUserProfile = async (req, res) => {
   try {
-    const profile = await UserProfiles.findOneAndDelete({ user: req.user._id });
+    const profile = await UserProfiles.findOneAndDelete({ user: req.user.id });
     if (!profile) {
       return res.status(404).json({ msg: "Profile not found" });
     }

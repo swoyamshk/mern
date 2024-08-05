@@ -13,7 +13,7 @@ const profileSchema = new mongoose.Schema({
     },
     profileImage: {
         type: String // Store the URL of the uploaded image
-    },
+    }
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
