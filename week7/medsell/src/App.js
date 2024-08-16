@@ -22,6 +22,10 @@ import RegisterPage from './components/SignUp/SignUp';
 import ContactUs from './components/ContactUs/ContactUs';
 import EventRegistration from './components/EventRegistration/EventRegistration';
 import RegistrationForm from './components/Register/Register';
+import CategoryComponent from './components/Category/CategoryComponent';
+import LoginComponent from './components/LoginComponent/LoginComponent';
+import AddProductComponent from './components/AddProduct/AddProduct';
+import Products from './components/Products/Products';
 
 function App() {
   return (
@@ -33,15 +37,17 @@ function App() {
       <Route path ='/' element={<HomeComponent/>}/>
       <Route path ='/shop' element={<ShopComponent/>}/>
       <Route path ='/about' element={<AboutComponent/>}/>
-      <Route path ='/product' element={<ProductComponent/>}/>
+      <Route path ='/product' element={<AddProductComponent/>}/>
       <Route path ='/contact' element={<ContactUs/>}/>
       <Route path ='/event' element={<EventRegistration/>}/>
-      <Route path ='/login' element={<LoginPage/>}/>
+      <Route path ='/login' element={<LoginComponent/>}/>
       <Route path ='/signup' element={<RegistrationForm/>}/>
+      <Route path ='/category' element={<CategoryComponent/>}/>
+      <Route path ='/getProduct' element={<Products/>}/>
 
-      
 
 
+  
     </Routes>
     </Router>
 

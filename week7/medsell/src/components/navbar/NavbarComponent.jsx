@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import EventRegistration from './../EventRegistration/EventRegistration';
 
-function NavbarComponent() {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,12 +18,11 @@ function NavbarComponent() {
             </div>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
-              <Link to="/" className="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</Link>
+              <Link to="/" className="py-4 px-2     font-semibold ">Home</Link>
               <Link to="/shop" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Shop</Link>
               <Link to="/about" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</Link>
               <Link to="/contact" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact</Link>
               <Link to="/product" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Product</Link>
-              <Link to="/event" className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Event Registration</Link>
 
             </div>
           </div>
@@ -59,7 +57,7 @@ function NavbarComponent() {
             <li><Link to="/shop" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Shop</Link></li>
             <li><Link to="/about" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</Link></li>
             <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact</Link></li>
-            <li><Link to="/event" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Event Registration</Link></li>
+            <li><Link to="/product" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Product</Link></li>
 
             <li><Link to="/login" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Log In</Link></li>
             <li><Link to="/signup" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Sign Up</Link></li>
@@ -70,4 +68,4 @@ function NavbarComponent() {
   );
 }
 
-export default NavbarComponent;
+export default Navbar;

@@ -136,8 +136,8 @@ app.use(cors());
 // app.use('/user', userRoute)
 app.use('/user', productRoute)
 app.use('/api/auth', authRoute)
-app.use('/category',categoryRoute)
-app.use('/product',productRoute)
+app.use('/api/category',categoryRoute)
+app.use('/api/product',productRoute)
 
 
 app.use('/api/profile', profileRoutes);

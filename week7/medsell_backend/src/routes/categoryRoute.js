@@ -14,8 +14,13 @@ const {addCategory} =  require("../controllers/categoryController");
  */
 
 router.post("/create", auth, authorizeRole('admin'), categoryController.addCategory);
-router.post("/update/:id", auth, authorizeRole('admin'), categoryController.updateCategory);
+router.patch("/update/:id", auth, authorizeRole('admin'), categoryController.updateCategory);
 router.get("/getCategory/:id", auth, authorizeRole('admin'), categoryController.getCategory);
+router.get("/getCategory",   categoryController.getCategories);
+router.delete("/delete/:id",   categoryController.deleteCategory);
+
+
+
 
 
 module.exports = router;

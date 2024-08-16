@@ -1,6 +1,6 @@
 const Product = require("../models/productModel");
 const mongoose = require('mongoose');
-const domain = "http://localhost:5000";
+const domain = "http://localhost:3000";
 
 // Helper function to send error responses
 const sendErrorResponse = (res, error) => {
@@ -116,22 +116,36 @@ const updateProduct = async (req, res) => {
   
 
 // Get all products (Public)
-const getProducts = async (req, res) => {
-  const { search, sort } = req.query;
-  let query = {};
-  if (search) {
-    query.name = { $regex: search, $options: "i" };
+
+const getProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ msg: "Invalid product ID" });
+    }
+    
+    const product = await Product.findById(id);
+    if (!product) {
+      return res.status(404).json({ msg: "Product not found" });
+    }
+
+    res.status(200).json(product);
+  } catch (error) {
+    sendErrorResponse(res, error);
   }
-
-  let products = await Product.find(query);
-
-  if (sort) {
-    const sortOrder = sort === "asc" ? 1 : -1;
-    products = products.sort((a, b) => (a.price - b.price) * sortOrder);
-  }
-
-  res.json(products);
 };
+
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find();  // Fetch all products from the database
+    res.status(200).json(products);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    sendErrorResponse(res, error);
+  }
+};
+
+// Route setup
 
 // Get all products (Public) and filter by category
 const getProductsByCategory = async (req, res) => {
@@ -143,20 +157,20 @@ const getProductsByCategory = async (req, res) => {
   }
 };
 
-// Get a single product by ID (Public)
-const getProduct = async (req, res) => {
-  try {
-    const product = await Product.findById(req.params.id);
+// // Get a single product by ID (Public)
+// const getProduct = async (req, res) => {
+//   try {
+//     const product = await Product.findById(req.params.id);
 
-    if (!product) {
-      return res.status(404).json({ msg: "Product not found" });
-    }
+//     if (!product) {
+//       return res.status(404).json({ msg: "Product not found" });
+//     }
 
-    res.status(200).json(product);
-  } catch (error) {
-    sendErrorResponse(res, error);
-  }
-};
+//     res.status(200).json(product);
+//   } catch (error) {
+//     sendErrorResponse(res, error);
+//   }
+// };
 
 // Delete a product (Admin Only)
 const deleteProduct = async (req, res) => {
@@ -178,7 +192,7 @@ const deleteProduct = async (req, res) => {
 module.exports = {
   createProduct,
   updateProduct,
-  getProducts,
   getProduct,
   deleteProduct,
+  getAllProducts
 };
